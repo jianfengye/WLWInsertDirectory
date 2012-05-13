@@ -41,7 +41,9 @@ namespace InsertDire
                 pNode.AppendChild(ahref);
                 directory.AppendChild(pNode);
 
-                item.SetAttribute("name", "section" + sectionNum);
+                XmlElement alink = xmlDoc.CreateElement("a");
+                alink.SetAttribute("name", "section" + sectionNum);
+                item.AppendChild(alink);
 
                 sectionNum++;
             };
